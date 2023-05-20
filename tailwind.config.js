@@ -1,18 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  important: true,
   content: [
     "./src/**/*.{html,ts}",
   ],
   theme: {
-    colors: {
-      'primary': {
-        800: '#14213d',
-        900: '#0a142f',
-      },
-      'secondary': {
-        50: '#ecfdf3',
-        500: '#027a48',
-      },
+    colors:{
+      transparent: 'transparent',
+
     },
     extend: {
       opacity: {
@@ -24,6 +19,14 @@ module.exports = {
         'white': '#ffffff',
         'smoky-black': '#0c0c0f',
         'black': '#000000',
+        'primary': {
+          800: '#14213d',
+          900: '#0a142f',
+        },
+        'secondary': {
+          50: '#ecfdf3',
+          500: '#027a48',
+        },
         'regal-blue': {
           50: '#f0faff',
           100: '#dcf2ff',
@@ -76,6 +79,9 @@ module.exports = {
           900: '#412d82',
           950: '#281a4c',
         },
+      },
+      spacing: {
+        '18': '4.5rem'
       }
     },
   },

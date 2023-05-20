@@ -1,0 +1,43 @@
+cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing,
+.cdk-overlay-connected-position-bounding-box {
+    left: 0 !important;
+    top: 4.5rem !important;
+}
+
+.mat-mdc-menu-panel.mat-mdc-menu-panel {
+    max-width: unset !important;
+    min-width: unset !important;
+    transform-origin: center top !important;
+}
+
+.cdk-overlay-transparent-backdrop.cdk-overlay-backdrop-showing {
+    top: 4.5rem !important;
+}
+
+.mat-mdc-menu-content,
+.mat-expansion-panel-body {
+    padding: 0 !important;
+}
+.mat-mdc-menu-content{
+    height: fit-content;
+}
+.mdc-list-item__primary-text {
+    display: flex;
+}
+
+.mat-expansion-panel-header-title,
+.mat-expansion-panel-header-description,
+.mat-content.mat-content-hide-toggle {
+    margin: 0 !important;
+}
+
+.mat-expansion-panel-header.mat-expanded,
+.mat-expansion-panel-header {
+    height: auto !important;
+}
+
+#cdk-overlay-0{
+    width: 100%;
+    top: 0!important;
+    left: 20%!important;
+}

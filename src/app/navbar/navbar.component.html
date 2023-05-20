@@ -1,1 +1,246 @@
-<p>navbar works!</p>
+<mat-toolbar class="bg-white mx-auto  pl-4 pr-3 md:px-9 lg:px-26 h-18 md:h-20">
+    <div class=" relative flex flex-1 items-center justify-between md:items-stretch ">
+        <div class="flex">
+            <div class="flex flex-shrink-0 items-center">
+                <img class="block h-9 w-auto " src="../../assets/logo.svg" alt="Your Company">
+            </div>
+            <div class="hidden lg:ml-8 ml-5 md:block">
+                <div class="flex lg:space-x-8 space-x-5">
+                    <a routerLink="/home"
+                        class="text-regal-blue-800 hover:text-regal-blue-900 hover:border-regal-blue-900 border-transparent border-b-4 focus:text-regal-blue-950 focus:border-regal-blue-950 lg:px-4 px-auto pt-4 pb-3 text-base font-semibold ">Home</a>
+                    <a href="#"
+                        class="text-regal-blue-800 hover:text-regal-blue-900 hover:border-regal-blue-900 border-transparent border-b-4 focus:text-regal-blue-950 focus:border-regal-blue-950 md:px-4 px-2 pt-4 pb-3 text-base font-semibold  justify-center inline-flex">Nosotros
+                        <img src="../../assets/icons/heroicons-mini/chevron-down.svg" alt="arrow down"
+                            class="h-6 relative left-1">
+                    </a>
+                    <button [matMenuTriggerFor]="submenu" type="button" (click)="$event.stopPropagation()"
+                        class="text-regal-blue-800 hover:text-regal-blue-900 hover:border-regal-blue-900 border-transparent border-b-4 focus:text-regal-blue-950 focus:border-regal-blue-950 md:px-4 px-2 pt-4 pb-3 text-base font-semibold justify-center inline-flex">Productos
+                        <img src="../../assets/icons/heroicons-mini/chevron-down.svg" alt="arrow down"
+                            class=" h-6 relative left-1">
+                    </button>
+                    <button type="button" (click)="$event.stopPropagation()"
+                        class="text-regal-blue-800 hover:text-regal-blue-900 hover:border-regal-blue-900 border-transparent border-b-4 focus:text-regal-blue-950 focus:border-regal-blue-950 md:px-4 px-2 pt-4 pb-3 text-base font-semibold justify-center inline-flex">Precios
+                        <img src="../../assets/icons/heroicons-mini/chevron-down.svg" alt="arrow down"
+                            class=" h-6 relative left-1">
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- login btn -->
+        <div class="ml-4 items-center hidden md:flex justify-end">
+            <button type="button"
+                class="flex h-12 w-32 rounded-lg items-center justify-center text-sm font-semibold text-white bg-regal-blue-800">Acceder
+                <img src="../../assets/icons/heroicons-outline/user-circle.svg" alt="user icon" class="ps-3">
+            </button>
+        </div>
+        <!-- end login btn -->
+    </div>
+    <!-- hamburguer menu -->
+    <div class="flex md:hidden ml-auto">
+        <button mat-button [matMenuTriggerFor]="menu" class=" p-1.5 text-black">
+            <img src="../../assets/icons/heroicons-mini/bars-3.svg" alt="hamburguer menu" class="h-6 w-6">
+        </button>
+    </div>
+    <!-- end hamburguer menu -->
+</mat-toolbar>
+<!-- menu mobile -->
+<mat-menu #menu="matMenu"
+    class="absolute h-full   flex justify-start   bg-white border-t-woodsmoke-100 border-t shadow-none ">
+    <ng-template matMenuContent>
+        <div class="block  md:hidden  relative w-screen    ">
+            <div class="flex flex-col py-6">
+                <a routerLink="/home"
+                    class="text-regal-blue-800 hover:text-regal-blue-900 hover:border-regal-blue-900 border-transparent border-b-4 focus:text-regal-blue-950 focus:border-regal-blue-950  px-6 pt-4 pb-3 text-base font-semibold justify-start inline-flex">Home</a>
+                <a routerLink="/about"
+                    class="text-regal-blue-800 hover:text-regal-blue-900 hover:border-regal-blue-900 border-transparent border-b-4 focus:text-regal-blue-950 focus:border-regal-blue-950  px-6 pt-4 pb-3 text-base font-semibold  justify-start inline-flex">Nosotros
+                    <img src="../../assets/icons/heroicons-mini/chevron-down.svg" alt="arrow down"
+                        class="h-6 relative left-1">
+                </a>
+                <mat-accordion>
+                    <mat-expansion-panel hideToggle (opened)="panelOpenState = true" (closed)="panelOpenState = false"
+                        class="p-0 rounded-none shadow-none">
+                        <mat-expansion-panel-header (click)="$event.stopPropagation()" class="p-0 m-0 hover:bg-white ">
+                            <mat-panel-title
+                                class="text-regal-blue-800 hover:text-regal-blue-900 hover:border-regal-blue-900 border-transparent border-b-4 focus:text-regal-blue-950 focus:border-regal-blue-950 px-6 pt-4 pb-3 text-base font-semibold  h-auto ">
+                                <div class=" inline-flex" (click)="$event.stopPropagation()">
+                                    Productos
+                                    <img src="../../assets/icons/heroicons-mini/chevron-down.svg" alt="arrow down"
+                                        class=" h-6 relative ps-1">
+                                </div>
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <ng-template matExpansionPanelContent>
+                            <div class="flex flex-col rounded-lg border-woodsmoke-200 border mx-3 my-2">
+                                <p class="relative m-0 ps-4 pt-6 font-medium text-sm text-regal-blue-950 rounded-t-lg">
+                                    Productos</p>
+                                <mat-nav-list class="pt-3 pb-0 list-menu">
+                                    <mat-list-item class="py-3 px-4 m-0 h-18">
+                                        <div
+                                            class="h-12 w-12 justify-center items-center inline-flex rounded-full bg-regal-blue-50">
+                                            <img src="../../assets/icons/heroicons-solid/chart-bar.svg" alt=""
+                                                class="h-6">
+                                        </div>
+                                        <div class="flex flex-col ps-4">
+                                            <span class="font-semibold text-woodsmoke-950">Reportes </span>
+                                            <small class="pt-1 text-sm font-normal text-woodsmoke-500">Aprende de los
+                                                usuarios</small>
+                                        </div>
+                                    </mat-list-item>
+                                    <mat-list-item class="py-3 px-4 m-0 h-18">
+                                        <div
+                                            class="h-12 w-12 justify-center items-center inline-flex rounded-full bg-regal-blue-50">
+                                            <img src="../../assets/icons/heroicons-solid/chart-bar.svg" alt=""
+                                                class="h-6">
+                                        </div>
+                                        <div class="flex flex-col ps-4">
+                                            <span class="font-semibold text-woodsmoke-950">Acceso desde la web </span>
+                                            <small class="pt-1 text-sm font-normal text-woodsmoke-500">Monitorea
+                                                todo</small>
+                                        </div>
+                                    </mat-list-item>
+                                    <mat-list-item class="py-3 px-4 m-0 h-18">
+                                        <div
+                                            class="h-12 w-12 justify-center items-center inline-flex rounded-full bg-regal-blue-50">
+                                            <img src="../../assets/icons/heroicons-solid/chart-bar.svg" alt=""
+                                                class="h-6">
+                                        </div>
+                                        <div class="flex flex-col ps-4">
+                                            <span class="font-semibold text-woodsmoke-950">Gráficos </span>
+                                            <small
+                                                class="pt-1 text-sm font-normal text-woodsmoke-500">Tendencias</small>
+                                        </div>
+                                    </mat-list-item>
+                                    <mat-list-item class="py-3 px-4 m-0 h-18">
+                                        <div
+                                            class="h-12 w-12 justify-center items-center inline-flex rounded-full bg-regal-blue-50">
+                                            <img src="../../assets/icons/heroicons-solid/chart-bar.svg" alt=""
+                                                class="h-6">
+                                        </div>
+                                        <div class="flex flex-col ps-4">
+                                            <span class="font-semibold text-woodsmoke-950">Analytics de Facebook <span
+                                                    class="px-2.5 py-0.5 text-sm font-medium text-secondary-500 bg-secondary-50 rounded-2xl">New</span></span>
+                                            <small class="pt-1 text-sm text-woodsmoke-500">Texto aquí</small>
+                                        </div>
+                                    </mat-list-item>
+                                    <mat-list-item class="py-7 px-4 m-0 h-32 bg-regal-blue-100 rounded-b-lg  flex">
+                                        <div
+                                            class="flex-col flex gap-6 text-regal-blue-800 text-opacity-75 font-medium">
+                                            <p class=" m-0">Regístrate gratis</p>
+                                            <p class="flex m-0"><span><img
+                                                        src="../../assets/icons/heroicons-outline/chat-bubble-oval-left.svg"
+                                                        alt="" srcset=""></span>Habla con un asesor</p>
+                                        </div>
+
+                                    </mat-list-item>
+                                </mat-nav-list>
+                            </div>
+                        </ng-template>
+
+                    </mat-expansion-panel>
+                </mat-accordion>
+                <button type="button" (click)="$event.stopPropagation()"
+                    class="text-regal-blue-800 hover:text-regal-blue-900 hover:border-regal-blue-900 border-transparent border-b-4 focus:text-regal-blue-950 focus:border-regal-blue-950  px-6 pt-4 pb-3 text-base font-semibold justify-start inline-flex h-auto">Precios
+                    <img src="../../assets/icons/heroicons-mini/chevron-down.svg" alt="arrow down"
+                        class=" h-6 relative left-1">
+                </button>
+            </div>
+            <div class="px-4 pt-6 pb-8 flex flex-row gap-6 text-sm font-medium ">
+                <div class="flex flex-col gap-3 flex-grow ">
+                    <a href="#"
+                        class="px-6 py-3 text-regal-blue-800 hover:text-regal-blue-900 focus:text-regal-blue-950 active:rounded-3xl active:border-regal-blue-200 border-4 border-transparent text-center">Nosotros</a>
+                    <a href="#"
+                        class="px-6 py-3 text-regal-blue-800 hover:text-regal-blue-900 focus:text-regal-blue-950 active:rounded-3xl active:border-regal-blue-200 border-4 border-transparent text-center">Prensa</a>
+                    <a href="#"
+                        class="px-6 py-3 text-regal-blue-800 hover:text-regal-blue-900 focus:text-regal-blue-950 active:rounded-3xl active:border-regal-blue-200 border-4 border-transparent text-center">Vacantes</a>
+                    <a href="#"
+                        class="px-6 py-3 text-regal-blue-800 hover:text-regal-blue-900 focus:text-regal-blue-950 active:rounded-3xl active:border-regal-blue-200 border-4 border-transparent text-center">Legal</a>
+                </div>
+                <div class="flex flex-col gap-3 flex-grow ">
+                    <a href="#"
+                        class="px-6 py-3 text-regal-blue-800 hover:text-regal-blue-900 focus:text-regal-blue-950 active:rounded-3xl active:border-regal-blue-200 border-4 border-transparent text-center">Soporte</a>
+                    <a href="#"
+                        class="px-6 py-3 text-regal-blue-800 hover:text-regal-blue-900 focus:text-regal-blue-950 active:rounded-3xl active:border-regal-blue-200 border-4 border-transparent text-center">Contacto</a>
+                    <a href="#"
+                        class="px-6 py-3 text-regal-blue-800 hover:text-regal-blue-900 focus:text-regal-blue-950 active:rounded-3xl active:border-regal-blue-200 border-4 border-transparent text-center">Mapa
+                        del sitio</a>
+                    <a href="#"
+                        class="px-6 py-3 text-regal-blue-800 hover:text-regal-blue-900 focus:text-regal-blue-950 active:rounded-3xl active:border-regal-blue-200 border-4 border-transparent text-center">Cookies</a>
+                </div>
+            </div>
+            <div class="mx-4 mb-6">
+                <button type="button" (click)="$event.stopPropagation()"
+                    class="flex h-12 w-full rounded-lg items-center justify-center text-sm font-semibold text-white bg-regal-blue-800 hover:bg-regal-blue-900 focus:bg-regal-blue-950  active:outline-regal-blue-200 outline-4 outline outline-transparent">Acceder
+                    <img src="../../assets/icons/heroicons-outline/user-circle.svg" alt="user icon" class="ps-3">
+                </button>
+                <button type="button" (click)="$event.stopPropagation()"
+                    class="mt-3 flex h-12 w-full rounded-lg items-center justify-center text-sm font-semibold bg-white text-regal-blue-800 hover:text-regal-blue-900 focus:text-regal-blue-950 active:outline-regal-blue-200 outline-4 outline outline-transparent border-2 border-regal-blue-800">Registrarse
+                    <img src="../../assets/icons/heroicons-outline/user-plus.svg" alt="user icon" class="ps-3">
+                </button>
+            </div>
+        </div>
+    </ng-template>
+
+</mat-menu>
+<!-- end menu mobile -->
+<mat-menu #submenu="matMenu" xPosition="before"
+    class="relative h-full w-full  flex justify-start   bg-white border-t-woodsmoke-100 border-t shadow-none ">
+    <ng-template matMenuContent class=" ">
+                <div class="flex flex-col rounded-lg border-woodsmoke-200 border overflow-y-hidden w-full">
+                    <p class="relative m-0 ps-4 pt-6 font-medium text-sm text-regal-blue-950 rounded-t-lg">
+                        Productos</p>
+                    <mat-nav-list class="pt-3 pb-0 list-menu">
+                        <mat-list-item class="py-3 px-4 m-0 h-18">
+                            <div
+                                class="h-12 w-12 justify-center items-center inline-flex rounded-full bg-regal-blue-50">
+                                <img src="../../assets/icons/heroicons-solid/chart-bar.svg" alt="" class="h-6">
+                            </div>
+                            <div class="flex flex-col ps-4">
+                                <span class="font-semibold text-woodsmoke-950">Reportes </span>
+                                <small class="pt-1 text-sm font-normal text-woodsmoke-500">Aprende de los
+                                    usuarios</small>
+                            </div>
+                        </mat-list-item>
+                        <mat-list-item class="py-3 px-4 m-0 h-18">
+                            <div
+                                class="h-12 w-12 justify-center items-center inline-flex rounded-full bg-regal-blue-50">
+                                <img src="../../assets/icons/heroicons-solid/chart-bar.svg" alt="" class="h-6">
+                            </div>
+                            <div class="flex flex-col ps-4">
+                                <span class="font-semibold text-woodsmoke-950">Acceso desde la web </span>
+                                <small class="pt-1 text-sm font-normal text-woodsmoke-500">Monitorea
+                                    todo</small>
+                            </div>
+                        </mat-list-item>
+                        <mat-list-item class="py-3 px-4 m-0 h-18">
+                            <div
+                                class="h-12 w-12 justify-center items-center inline-flex rounded-full bg-regal-blue-50">
+                                <img src="../../assets/icons/heroicons-solid/chart-bar.svg" alt="" class="h-6">
+                            </div>
+                            <div class="flex flex-col ps-4">
+                                <span class="font-semibold text-woodsmoke-950">Gráficos </span>
+                                <small class="pt-1 text-sm font-normal text-woodsmoke-500">Tendencias</small>
+                            </div>
+                        </mat-list-item>
+                        <mat-list-item class="py-3 px-4 m-0 h-18">
+                            <div
+                                class="h-12 w-12 justify-center items-center inline-flex rounded-full bg-regal-blue-50">
+                                <img src="../../assets/icons/heroicons-solid/chart-bar.svg" alt="" class="h-6">
+                            </div>
+                            <div class="flex flex-col ps-4">
+                                <span class="font-semibold text-woodsmoke-950">Analytics de Facebook <span
+                                        class="px-2.5 py-0.5 text-sm font-medium text-secondary-500 bg-secondary-50 rounded-2xl">New</span></span>
+                                <small class="pt-1 text-sm text-woodsmoke-500">Texto aquí</small>
+                            </div>
+                        </mat-list-item>
+                        <mat-list-item class="py-7 px-4 m-0 h-32 bg-regal-blue-100 rounded-b-lg  flex">
+                            <div class="flex-row flex gap-56 text-regal-blue-800 text-opacity-75 font-medium">
+                                <p class=" m-0">Regístrate gratis</p>
+                                <p class="flex m-0"><span><img
+                                            src="../../assets/icons/heroicons-outline/chat-bubble-oval-left.svg" alt=""
+                                            srcset=""></span>Habla con un asesor</p>
+                            </div>
+                        </mat-list-item>
+                    </mat-nav-list>
+                </div>
+    </ng-template>
+</mat-menu>
