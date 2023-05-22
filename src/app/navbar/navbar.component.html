@@ -5,21 +5,21 @@
                 <img class="block h-9 w-auto " src="../../assets/logo.svg" alt="Your Company">
             </div>
             <div class="hidden lg:ml-8 ml-5 md:block">
-                <div class="flex lg:space-x-8 space-x-5">
+                <div class="flex lg:space-x-8 space-x-5 text-regal-blue-800 hover:text-regal-blue-900 focus:text-regal-blue-950 text-base font-semibold">
                     <a routerLink="/home"
-                        class="text-regal-blue-800 hover:text-regal-blue-900 hover:border-regal-blue-900 border-transparent border-b-4 focus:text-regal-blue-950 focus:border-regal-blue-950 lg:px-4 px-auto pt-4 pb-3 text-base font-semibold ">Home</a>
+                        class=" hover:border-regal-blue-900 border-transparent border-b-4  focus:border-regal-blue-950 lg:px-4 px-auto pt-4 pb-3  ">Home</a>
                     <a href="#"
-                        class="text-regal-blue-800 hover:text-regal-blue-900 hover:border-regal-blue-900 border-transparent border-b-4 focus:text-regal-blue-950 focus:border-regal-blue-950 md:px-4 px-2 pt-4 pb-3 text-base font-semibold  justify-center inline-flex">Nosotros
+                        class=" hover:border-regal-blue-900 border-transparent border-b-4  focus:border-regal-blue-950 md:px-4 px-2 pt-4 pb-3   justify-center inline-flex">Nosotros
                         <img src="../../assets/icons/heroicons-mini/chevron-down.svg" alt="arrow down"
                             class="h-6 relative left-1">
                     </a>
                     <button [matMenuTriggerFor]="submenu" type="button" (click)="$event.stopPropagation()"
-                        class="text-regal-blue-800 hover:text-regal-blue-900 hover:border-regal-blue-900 border-transparent border-b-4 focus:text-regal-blue-950 focus:border-regal-blue-950 md:px-4 px-2 pt-4 pb-3 text-base font-semibold justify-center inline-flex">Productos
+                        class=" hover:border-regal-blue-900 border-transparent border-b-4  focus:border-regal-blue-950 md:px-4 px-2 pt-4 pb-3  justify-center inline-flex">Productos
                         <img src="../../assets/icons/heroicons-mini/chevron-down.svg" alt="arrow down"
                             class=" h-6 relative left-1">
                     </button>
                     <button type="button" (click)="$event.stopPropagation()"
-                        class="text-regal-blue-800 hover:text-regal-blue-900 hover:border-regal-blue-900 border-transparent border-b-4 focus:text-regal-blue-950 focus:border-regal-blue-950 md:px-4 px-2 pt-4 pb-3 text-base font-semibold justify-center inline-flex">Precios
+                        class=" hover:border-regal-blue-900 border-transparent border-b-4  focus:border-regal-blue-950 md:px-4 px-2 pt-4 pb-3  justify-center inline-flex">Precios
                         <img src="../../assets/icons/heroicons-mini/chevron-down.svg" alt="arrow down"
                             class=" h-6 relative left-1">
                     </button>
@@ -29,7 +29,7 @@
         <!-- login btn -->
         <div class="ml-4 items-center hidden md:flex justify-end">
             <button type="button"
-                class="flex h-12 w-32 rounded-lg items-center justify-center text-sm font-semibold text-white bg-regal-blue-800">Acceder
+                class="flex h-12 w-32 rounded-lg items-center justify-center text-sm font-semibold text-white bg-regal-blue-800 hover:bg-regal-blue-900 focus:bg-regal-blue-950  active:outline-regal-blue-200 outline-4 outline outline-transparent">Acceder
                 <img src="../../assets/icons/heroicons-outline/user-circle.svg" alt="user icon" class="ps-3">
             </button>
         </div>
@@ -45,9 +45,9 @@
 </mat-toolbar>
 <!-- menu mobile -->
 <mat-menu #menu="matMenu"
-    class="absolute h-full   flex justify-start   bg-white border-t-woodsmoke-100 border-t shadow-none ">
+    class="absolute h-full   flex justify-start    border-t-woodsmoke-100 border-t shadow-none ">
     <ng-template matMenuContent>
-        <div class="block  md:hidden  relative w-screen    ">
+        <div class="block  md:hidden  relative w-screen   bg-white ">
             <div class="flex flex-col py-6">
                 <a routerLink="/home"
                     class="text-regal-blue-800 hover:text-regal-blue-900 hover:border-regal-blue-900 border-transparent border-b-4 focus:text-regal-blue-950 focus:border-regal-blue-950  px-6 pt-4 pb-3 text-base font-semibold justify-start inline-flex">Home</a>
@@ -57,7 +57,7 @@
                         class="h-6 relative left-1">
                 </a>
                 <mat-accordion>
-                    <mat-expansion-panel hideToggle (opened)="panelOpenState = true" (closed)="panelOpenState = false"
+                    <mat-expansion-panel hideToggle 
                         class="p-0 rounded-none shadow-none">
                         <mat-expansion-panel-header (click)="$event.stopPropagation()" class="p-0 m-0 hover:bg-white ">
                             <mat-panel-title
@@ -70,7 +70,7 @@
                             </mat-panel-title>
                         </mat-expansion-panel-header>
                         <ng-template matExpansionPanelContent>
-                            <div class="flex flex-col rounded-lg border-woodsmoke-200 border mx-3 my-2">
+                            <div class="flex flex-col rounded-lg border-woodsmoke-200 border mx-3 my-2 ">
                                 <p class="relative m-0 ps-4 pt-6 font-medium text-sm text-regal-blue-950 rounded-t-lg">
                                     Productos</p>
                                 <mat-nav-list class="pt-3 pb-0 list-menu">
@@ -135,7 +135,6 @@
                                 </mat-nav-list>
                             </div>
                         </ng-template>
-
                     </mat-expansion-panel>
                 </mat-accordion>
                 <button type="button" (click)="$event.stopPropagation()"
@@ -144,36 +143,36 @@
                         class=" h-6 relative left-1">
                 </button>
             </div>
-            <div class="px-4 pt-6 pb-8 flex flex-row gap-6 text-sm font-medium ">
+            <div class="px-4 pt-6 pb-8 flex flex-row gap-6 text-sm font-medium text-regal-blue-800 hover:text-regal-blue-900 focus:text-regal-blue-950 text-center">
                 <div class="flex flex-col gap-3 flex-grow ">
                     <a href="#"
-                        class="px-6 py-3 text-regal-blue-800 hover:text-regal-blue-900 focus:text-regal-blue-950 active:rounded-3xl active:border-regal-blue-200 border-4 border-transparent text-center">Nosotros</a>
+                        class="px-6 py-3 active:rounded-3xl active:border-regal-blue-200 border-4 border-transparent ">Nosotros</a>
                     <a href="#"
-                        class="px-6 py-3 text-regal-blue-800 hover:text-regal-blue-900 focus:text-regal-blue-950 active:rounded-3xl active:border-regal-blue-200 border-4 border-transparent text-center">Prensa</a>
+                        class="px-6 py-3 active:rounded-3xl active:border-regal-blue-200 border-4 border-transparent ">Prensa</a>
                     <a href="#"
-                        class="px-6 py-3 text-regal-blue-800 hover:text-regal-blue-900 focus:text-regal-blue-950 active:rounded-3xl active:border-regal-blue-200 border-4 border-transparent text-center">Vacantes</a>
+                        class="px-6 py-3 active:rounded-3xl active:border-regal-blue-200 border-4 border-transparent ">Vacantes</a>
                     <a href="#"
-                        class="px-6 py-3 text-regal-blue-800 hover:text-regal-blue-900 focus:text-regal-blue-950 active:rounded-3xl active:border-regal-blue-200 border-4 border-transparent text-center">Legal</a>
+                        class="px-6 py-3 active:rounded-3xl active:border-regal-blue-200 border-4 border-transparent ">Legal</a>
                 </div>
                 <div class="flex flex-col gap-3 flex-grow ">
                     <a href="#"
-                        class="px-6 py-3 text-regal-blue-800 hover:text-regal-blue-900 focus:text-regal-blue-950 active:rounded-3xl active:border-regal-blue-200 border-4 border-transparent text-center">Soporte</a>
+                        class="px-6 py-3  active:rounded-3xl active:border-regal-blue-200 border-4 border-transparent ">Soporte</a>
                     <a href="#"
-                        class="px-6 py-3 text-regal-blue-800 hover:text-regal-blue-900 focus:text-regal-blue-950 active:rounded-3xl active:border-regal-blue-200 border-4 border-transparent text-center">Contacto</a>
+                        class="px-6 py-3  active:rounded-3xl active:border-regal-blue-200 border-4 border-transparent ">Contacto</a>
                     <a href="#"
-                        class="px-6 py-3 text-regal-blue-800 hover:text-regal-blue-900 focus:text-regal-blue-950 active:rounded-3xl active:border-regal-blue-200 border-4 border-transparent text-center">Mapa
+                        class="px-6 py-3  active:rounded-3xl active:border-regal-blue-200 border-4 border-transparent ">Mapa
                         del sitio</a>
                     <a href="#"
-                        class="px-6 py-3 text-regal-blue-800 hover:text-regal-blue-900 focus:text-regal-blue-950 active:rounded-3xl active:border-regal-blue-200 border-4 border-transparent text-center">Cookies</a>
+                        class="px-6 py-3  active:rounded-3xl active:border-regal-blue-200 border-4 border-transparent ">Cookies</a>
                 </div>
             </div>
-            <div class="mx-4 mb-6">
+            <div class="mx-4 mb-6 text-sm font-semibold">
                 <button type="button" (click)="$event.stopPropagation()"
-                    class="flex h-12 w-full rounded-lg items-center justify-center text-sm font-semibold text-white bg-regal-blue-800 hover:bg-regal-blue-900 focus:bg-regal-blue-950  active:outline-regal-blue-200 outline-4 outline outline-transparent">Acceder
+                    class="flex h-12 w-full rounded-lg items-center justify-center  text-white bg-regal-blue-800 hover:bg-regal-blue-900 focus:bg-regal-blue-950  active:outline-regal-blue-200 outline-4 outline outline-transparent">Acceder
                     <img src="../../assets/icons/heroicons-outline/user-circle.svg" alt="user icon" class="ps-3">
                 </button>
                 <button type="button" (click)="$event.stopPropagation()"
-                    class="mt-3 flex h-12 w-full rounded-lg items-center justify-center text-sm font-semibold bg-white text-regal-blue-800 hover:text-regal-blue-900 focus:text-regal-blue-950 active:outline-regal-blue-200 outline-4 outline outline-transparent border-2 border-regal-blue-800">Registrarse
+                    class="mt-3 flex h-12 w-full rounded-lg items-center justify-center  bg-white text-regal-blue-800 hover:text-regal-blue-900 focus:text-regal-blue-950 active:outline-regal-blue-200 outline-4 outline outline-transparent border-2 border-regal-blue-800">Registrarse
                     <img src="../../assets/icons/heroicons-outline/user-plus.svg" alt="user icon" class="ps-3">
                 </button>
             </div>
@@ -183,10 +182,10 @@
 </mat-menu>
 <!-- end menu mobile -->
 <mat-menu #submenu="matMenu" xPosition="before"
-    class="relative h-full w-full  flex justify-start   bg-white border-t-woodsmoke-100 border-t shadow-none ">
+    class="relative h-full w-full  flex justify-start    border-t-woodsmoke-100 border-t shadow-none ">
     <ng-template matMenuContent class=" ">
-                <div class="flex flex-col rounded-lg border-woodsmoke-200 border overflow-y-hidden w-full">
-                    <p class="relative m-0 ps-4 pt-6 font-medium text-sm text-regal-blue-950 rounded-t-lg">
+        <div class="flex flex-col rounded-lg border-woodsmoke-200 border overflow-y-hidden w-full bg-white">
+            <p class="relative m-0 ps-4 pt-6 font-medium text-sm text-regal-blue-950 rounded-t-lg">
                         Productos</p>
                     <mat-nav-list class="pt-3 pb-0 list-menu">
                         <mat-list-item class="py-3 px-4 m-0 h-18">

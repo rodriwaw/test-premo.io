@@ -41,3 +41,6 @@ cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showi
     top: 0!important;
     left: 20%!important;
 }
+.mdc-menu-surface{
+    background-color: unset!important;
+}
